@@ -1,0 +1,21 @@
+class Library:
+    def __init__(self):
+        self.numBooks = 0
+        self.Books = []
+        
+    def addBook(self, book):
+        self.Books.append(book)
+        self.numBooks = len(self.Books)
+        
+    def Info(self):
+        print(f"The Number of books in library is {self.numBooks} ")
+        print(f"\nThe Books are : \n {self.Books}")
+        # for book in self.Books:
+        #     print(book)
+        
+        
+a = Library()
+a.addBook("Geeta")
+a.addBook("Merchant Of Venice")
+a.addBook("Mackbaith")  
+a.Info()
