@@ -1,0 +1,30 @@
+import random 
+comp = random.randint(0,2)
+user = int(input("\n\nEnter a Number from 0 to 2 (0=Snake, 1=Water, 2=Gun) : "))
+
+def check(comp,user):
+    # self.comp = comp   #When we take arguments which are input then no need for self in func argyments section
+    # self.user = user
+    print("Computer : ",comp)
+    print("User : ",user)
+    if(user == comp):
+        return 0
+    if(comp == 0 and user ==1):
+        return -1
+    if(comp == 1 and user ==2):
+        return -1
+    if(comp == 2 and user ==0):
+        return -1
+    
+    return 1
+
+score = check(comp,user)
+if(score == 0):
+    print("Match Draw")
+elif(score == -1):
+    print("You Lose")
+else:
+    print("You Won")
+    
+    
+    
